@@ -6,6 +6,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = TestOfSpringBootApplication.class)
-public class TestOfSpringBootApplicationTests {
+public class BaseTest {
 
 }
