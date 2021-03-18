@@ -1,5 +1,8 @@
 package com.example.demo.datasource.jdbc;
 import oracle.jdbc.driver.OracleTypes;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Service;
+
 import java.sql.*;
 
 import static com.sun.activation.registries.LogSupport.log;
@@ -10,6 +13,7 @@ import static com.sun.activation.registries.LogSupport.log;
  * @author czy
  * @date 2021/3/11
  */
+@Configuration
 public class ConnectPROC {
     public void dataConnect() {
         ResultSet rs = null;
