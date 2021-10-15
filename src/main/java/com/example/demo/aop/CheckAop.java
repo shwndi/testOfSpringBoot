@@ -20,8 +20,8 @@ import java.lang.reflect.Method;
  * @author czy
  * @date 2020/04/23
  */
-@Aspect
-@Component
+//@Aspect
+//@Component
 public class CheckAop {
 
 

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.TestDao">
+    <!-- 添加机构信息 -->
+    <insert id="saveUnit" parameterType="com.example.demo.bo.UnitBO">
+        insert into SYS_UNIT(
+            UNIT_CODE,
+            UNIT_NAME,
+            UNIT_FULL_NAME,
+            REGION_CODE,
+            UNIT_PARENT_CODE,
+            UNIT_CHARGE,
+            UNIT_USCC,
+            UNIT_DESC,
+            UNIT_ADDR,
+            UNIT_TEL,
+            POSTCODE,
+            UNIT_ORDER,
+            UPDATE_TIME,
+            UNIT_TYPE,
+            UNIT_CODE_LINK,
+            UNIT_STATE,
+            UNIT_LEVEL,
+            UNIT_GIS
+        )values(
+                   #{unitCode,jdbcType=VARCHAR},
+                   #{unitName,jdbcType=VARCHAR},
+                   #{unitFullName,jdbcType=VARCHAR},
+                   #{regionCode,jdbcType=VARCHAR},
+                   #{unitParentCode,jdbcType=VARCHAR},
+                   #{unitCharge,jdbcType=VARCHAR},
+                   #{unitUscc,jdbcType=VARCHAR},
+                   #{unitDesc,jdbcType=VARCHAR},
+                   #{unitAddr,jdbcType=VARCHAR},
+                   #{unitTel,jdbcType=VARCHAR},
+                   #{postcode,jdbcType=VARCHAR},
+                   #{unitOrder,jdbcType=INTEGER},
+                   #{updateTime,jdbcType=TIMESTAMP},
+                   #{unitType,jdbcType=VARCHAR},
+                   #{unitCodeLink,jdbcType=VARCHAR},
+                   'Y',
+                   #{unitLevel,jdbcType=VARCHAR},
+                   #{unitGis,jdbcType=VARCHAR})
+    </insert>
+    <select id="get" resultType="java.lang.Integer">
+        select count(1) from SYS_UNIT
+        where UNIT_CODE= #{unitCode,jdbcType=VARCHAR}
+    </select>
+</mapper>    

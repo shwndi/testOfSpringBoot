@@ -1,0 +1,23 @@
+server:
+    port: 8080
+    servlet:
+        context-path: /
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+spring:
+  application:
+    name: czy
+  profiles:
+    platform: oracle
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 1
+      max-active: 20
+
+    url: jdbc:oracle:thin:@192.168.6.181:1521:arask
+    username: mo_oam
+    password: Arkj12#34

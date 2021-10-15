@@ -25,7 +25,40 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-    <!--springBoot 单元测试-->
+
+<!--        &lt;!&ndash;日志采集&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.zrar.easyweb</groupId>-->
+<!--            <artifactId>arlog-spring-boot-starter</artifactId>-->
+<!--            <version>5.1.0</version>-->
+<!--        </dependency>-->
+
+        <!--自定义缓存-->
+        <dependency>
+            <groupId>net.jodah</groupId>
+            <artifactId>expiringmap</artifactId>
+            <version>0.5.9</version>
+        </dependency>
+
+        <!--guava-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>25.1-jre</version>
+        </dependency>
+
+<!--        &lt;!&ndash;restful风格测试&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.github.lftao</groupId>-->
+<!--            <artifactId>restclient</artifactId>-->
+<!--            <version>0.1.6</version>-->
+<!--        </dependency>-->
+
+        <!--springBoot 单元测试-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -38,28 +71,43 @@
             </exclusions>
         </dependency>
 
+
+        <!--    数据库资源   -->
+        <!--Redis连接驱动-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
-            <version>2.1.12.RELEASE</version>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>3.3.0</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-jdbc</artifactId>-->
+<!--            <version>2.1.12.RELEASE</version>-->
+<!--        </dependency>-->
+
         <!-- oracle数据库驱动-->
         <dependency>
             <groupId>com.oracle</groupId>
             <artifactId>ojdbc14</artifactId>
             <version>10.2.0.4.0</version>
         </dependency>
-        <!--mysql数据库驱动-->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.16</version>
         </dependency>
+<!--        &lt;!&ndash;mysql数据库驱动&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>mysql</groupId>-->
+<!--            <artifactId>mysql-connector-java</artifactId>-->
+<!--            <scope>runtime</scope>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>2.1.4</version>
         </dependency>
+
         <!--AOP-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
